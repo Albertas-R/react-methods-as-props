@@ -13,8 +13,13 @@ class ParentComponent extends Component {
     this.greetParent = this.greetParent.bind(this);
   }
 
-  greetParent() {
-    alert(`Hello ${this.state.parentName}`);
+  // greetParent() {
+  //   alert(`Hello ${this.state.parentName}`);
+  // }
+
+  // v2 pass parameter when calling the parent method from the child component (arrow function syntax is simplest way to pass paremeters from the child component to the parent component)
+  greetParent(fromCild) {
+    alert(`Hello ${this.state.parentName} from ${fromCild}`);
   }
 
   render() {
